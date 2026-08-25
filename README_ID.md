@@ -114,6 +114,34 @@ web_search(query="berita terbaru Indonesia", limit=5)
 3. DeepSeek melakukan pencarian server-side dan mengembalikan hasil sebagai annotations
 4. Plugin mem-parsing annotations dan mengembalikan hasil terstruktur
 
+## Ganti-Ganti Backend Web Search
+
+Kamu bisa ganti-ganti antara MiMo dan DeepSeek sebagai backend web search.
+
+### Switch ke MiMo Web Search
+
+```bash
+hermes config set web.search_backend mimo
+hermes gateway restart
+```
+
+### Kembali ke DeepSeek Web Search
+
+```bash
+hermes config set web.search_backend deepseek
+hermes gateway restart
+```
+
+### Kalau Baru Saja Ubah Code Plugin
+
+Hapus cache plugin sebelum restart:
+
+```bash
+rm -rf ~/.hermes/plugins/web/deepseek/__pycache__
+rm -rf ~/.hermes/plugins/web/mimo/__pycache__
+hermes gateway restart
+```
+
 ## Troubleshooting
 
 ### Hasil kosong

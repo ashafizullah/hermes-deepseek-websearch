@@ -114,6 +114,34 @@ web_search(query="最新新闻", limit=5)
 3. DeepSeek 执行服务器端搜索并以 annotations 形式返回结果
 4. 插件解析 annotations 并返回结构化结果
 
+## 切换网页搜索后端
+
+你可以在 MiMo 和 DeepSeek 网页搜索后端之间轻松切换。
+
+### 切换到 MiMo 网页搜索
+
+```bash
+hermes config set web.search_backend mimo
+hermes gateway restart
+```
+
+### 切换回 DeepSeek 网页搜索
+
+```bash
+hermes config set web.search_backend deepseek
+hermes gateway restart
+```
+
+### 如果更改了插件代码
+
+重启前清除插件缓存：
+
+```bash
+rm -rf ~/.hermes/plugins/web/deepseek/__pycache__
+rm -rf ~/.hermes/plugins/web/mimo/__pycache__
+hermes gateway restart
+```
+
 ## 故障排除
 
 ### 结果为空

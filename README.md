@@ -114,6 +114,34 @@ web_search(query="latest news Indonesia", limit=5)
 3. DeepSeek performs server-side search and returns results as annotations
 4. Plugin parses annotations and returns structured results
 
+## Switching Between Web Search Backends
+
+You can easily switch between MiMo and DeepSeek web search backends.
+
+### Switch to MiMo Web Search
+
+```bash
+hermes config set web.search_backend mimo
+hermes gateway restart
+```
+
+### Switch Back to DeepSeek Web Search
+
+```bash
+hermes config set web.search_backend deepseek
+hermes gateway restart
+```
+
+### If You Changed Plugin Code
+
+Clear the plugin cache before restarting:
+
+```bash
+rm -rf ~/.hermes/plugins/web/deepseek/__pycache__
+rm -rf ~/.hermes/plugins/web/mimo/__pycache__
+hermes gateway restart
+```
+
 ## Troubleshooting
 
 ### Empty results
