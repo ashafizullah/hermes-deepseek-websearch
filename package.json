@@ -1,0 +1,30 @@
+{
+  "name": "hermes-deepseek-websearch",
+  "version": "1.0.0",
+  "description": "Hermes Agent plugin for DeepSeek native web search API",
+  "main": "provider.py",
+  "scripts": {
+    "postinstall": "echo 'Copy plugin files to ~/.hermes/plugins/web/deepseek/'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashafizullah/hermes-deepseek-websearch.git"
+  },
+  "keywords": [
+    "hermes",
+    "hermes-agent",
+    "deepseek",
+    "web-search",
+    "search",
+    "plugin",
+    "ai",
+    "llm",
+    "agent"
+  ],
+  "author": "Adam Suchi Hafizullah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashafizullah/hermes-deepseek-websearch/issues"
+  },
+  "homepage": "https://github.com/ashafizullah/hermes-deepseek-websearch#readme"
+}
