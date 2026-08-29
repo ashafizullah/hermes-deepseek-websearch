@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://img.shields.io/npm/v/hermes-deepseek-websearch.svg)](https://www.npmjs.com/package/hermes-deepseek-websearch)
 [![GitHub stars](https://img.shields.io/github/stars/ashafizullah/hermes-deepseek-websearch.svg)](https://github.com/ashafizullah/hermes-deepseek-websearch/stargazers)
+[![CI](https://github.com/ashafizullah/hermes-deepseek-websearch/actions/workflows/ci.yml/badge.svg)](https://github.com/ashafizullah/hermes-deepseek-websearch/actions/workflows/ci.yml)
 [![GitHub issues](https://img.shields.io/github/issues/ashafizullah/hermes-deepseek-websearch.svg)](https://github.com/ashafizullah/hermes-deepseek-websearch/issues)
 
 > 🇮🇩 [Bahasa Indonesia](README_ID.md) | 🇨🇳 [中文](README_ZH.md)
