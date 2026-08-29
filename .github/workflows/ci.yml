@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Python syntax check
+        run: python -m py_compile provider.py __init__.py
+
+      - name: Validate YAML files
+        run: python -c "import yaml; yaml.safe_load(open('plugin.yaml'))"
+
+      - name: Validate package.json
+        run: python -c "import json; json.load(open('package.json'))"
+
+      - name: Check README exists
+        run: test -f README.md && test -f README_ID.md && test -f README_ZH.md
